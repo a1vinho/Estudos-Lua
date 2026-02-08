@@ -1,0 +1,39 @@
+- Nesse arquivo iremos falar em detalhes sobre os operadores em lua 
+
+
+* Operadores Aritméticos (Matematicos): {
+    +: Operador responsável por atribuir dois ou mais numeros 
+    -: Operador responsável por subtrair dois ou mais numeros 
+    *: Operador responsável por multiplicar numeros 
+    /: Operador responsável por dividir numeros
+    %: Operador responsável por retorna o resto da divisão entre dois numeros 
+}
+
+* Operadores Lógicos: {
+    - Esses são os operadores para tomadas de decisões em estruturas condicionais.
+    - Eles consideram false e nil como falsos, enquanto qualquer outro valor (incluindo \(0\) e strings vazias) é verdadeiro
+
+    * and: Operador retorna true quando os dois valores são verdadeiros 
+    * or: Retorna true quando apenas um dos valores é verdadeiro 
+    * not: Sempre retorna true ou false,esse operador inverte o resultado lógico da operação
+
+
+    print(true and false) -> false 
+    print(true or false) -> true 
+    print(not true) -> true 
+
+}
+
+* Operadores Relacionais: {
+    - Os operadores relacionais são utilizados para comparar dois valores,retornando sempre um valor booleano como resultado da operação.
+    - Os operadores incluem 
+
+    * (==): Esse operador é responsável por verificar se dois valores são identicos entre si (10 == 10 -> true)
+    * (~=): Esse operador é o inverso do anterior,ele verifica se dois valores são diferentes entre si (10 ~= 9 -> true)
+    * (<):Esse operador verifica se o valor da esquerda é menor que o valor da direita (5 < 10 -> true)
+    * (>): Esse operador verifica se o valor da esquerda é maior que o valor da direita (10 > 5 -> true).
+
+    * (<=): Verifica se é menor ou igual. Ex: 5 <= 5 (true).
+    
+    * (>=): Verifica se é maior ou igual. Ex: 10 >= 10 (true). 
+}

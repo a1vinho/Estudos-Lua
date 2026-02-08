@@ -1,0 +1,157 @@
+Objetivo: entender a base do Lua
+
+O que é Lua e para que é usada (games, scripts, automação)
+
+Instalação do Lua
+
+Executar scripts (lua arquivo.lua)
+
+Comentários (--)
+
+Tipos básicos:
+
+nil, boolean, number, string
+
+Variáveis e atribuição
+
+Operadores:
+
+Aritméticos (+ - * / %)
+
+Lógicos (and, or, not)
+
+Comparação (== ~= < > <= >=)
+
+📌 Pratique: scripts simples de cálculo e condições
+
+🟢 2. Controle de fluxo
+
+Objetivo: controlar decisões e repetições
+
+Condicionais:
+
+if, elseif, else
+
+Laços:
+
+while
+
+repeat ... until
+
+for numérico
+
+for genérico (pairs, ipairs)
+
+Uso de break
+
+📌 Pratique: menus simples, loops de contagem, validação de dados
+
+🟢 3. Tabelas (parte mais importante do Lua!)
+
+Objetivo: dominar a estrutura principal da linguagem
+
+O que são tabelas
+
+Tabelas como:
+
+Arrays
+
+Dicionários (chave/valor)
+
+Acessar, inserir e remover dados
+
+Tabelas aninhadas
+
+Funções úteis:
+
+table.insert
+
+table.remove
+
+#tabela
+
+📌 Pratique: listas, inventários, configurações
+
+🟢 4. Funções
+
+Objetivo: organizar e reutilizar código
+
+Criar funções
+
+Parâmetros e retorno
+
+Funções anônimas
+
+Escopo de variáveis (local vs global)
+
+Funções dentro de tabelas
+
+📌 Pratique: calculadoras, utilitários, validações
+
+🟢 5. Manipulação de strings e arquivos
+
+Objetivo: trabalhar com texto e dados externos
+
+Funções de string:
+
+string.len, string.sub, string.find, string.gsub
+
+Concatenação
+
+Leitura e escrita de arquivos:
+
+io.open
+
+read, write, close
+
+📌 Pratique: leitura de arquivos, formatação de texto
+
+🟢 6. Módulos e organização
+
+Objetivo: estruturar projetos maiores
+
+Criar e importar módulos (require)
+
+Separar código em arquivos
+
+Boas práticas de organização
+
+🟢 7. Programação orientada a objetos (estilo Lua)
+
+Objetivo: entender o modelo de OOP do Lua
+
+Tabelas como objetos
+
+Metatables
+
+__index
+
+Simular classes e herança
+
+📌 Pratique: personagens, entidades, sistemas
+
+🟢 8. Próximo passo (especialização)
+
+Escolha onde usar Lua:
+
+🎮 Games
+
+Love2D
+
+Roblox (LuaU)
+
+⚙️ Scripts e automação
+
+🧠 Engines e embedded systems
+
+🖥️ Configurações (Neovim, AwesomeWM)
+
+Se quiser, posso:
+
+Transformar isso em plano de estudos semanal
+
+Indicar exercícios práticos
+
+Adaptar o roadmap para games, Roblox ou Love2D
+
+É só dizer 😉

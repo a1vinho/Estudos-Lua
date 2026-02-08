@@ -1,0 +1,29 @@
+- Nesse arquivo iremos aprender sobre a sintaxe básica da linguagem lua 
+
+* Como criar um comentário {
+    - Na linguagem lua,comentários de linha única são feitos utilizando dois traços de subtração (--)
+
+    -- Language Lua --
+}
+
+* Váraiveis {
+    - As váriaveis do tipo lua não precisa ser definidas com um tipo especifico e nem utilizando nenhuma palavra reservada.
+    - Igual a maiorias das linguagem,lua pode conter em suas váriaveis valores de todos os tipos.
+    - Os dados em Lua podem ser de cinco tipos básicos: nil, number, string e bool, descritos a seguir.
+
+    nome = "Luana"
+    idade = 25
+    idoso = false
+}
+
+* Tipos de dados {
+    - String: Sequência de caracteres, delimitada por aspas simples ou duplas. 
+
+    - Number: O tipo number representa valores numéricos. Lua não faz distinção entre valores numéricos com valores inteiros e reais. Todos os valores numéricos são tratados como sendo do tipo number. 
+
+    - Bool: Pode ser true ou false.
+
+    - Nil: Valor nulo, indicando a ausência de valor. Todas as variáveis ainda não inicializadas assumem o valor nil.
+
+    * Os tipos de dados em lua não é muito diferentes das outras linguagens de programação
+}

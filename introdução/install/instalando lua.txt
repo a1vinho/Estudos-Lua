@@ -1,0 +1,7 @@
+- Para instalar lua no ambiente linux baseados no ubuntu ou debian
+
+- Utilizamos os seguintes comandos {
+    sudo apt update 
+    sudo apt install lua5.3
+}
+- Logo após a instalação verificamos se ocorreu tudo bem (lua -v)

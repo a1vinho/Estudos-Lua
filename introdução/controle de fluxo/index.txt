@@ -1,0 +1,45 @@
+- Nesse arquivo iremos aprender sobre como controlar o fluxo de nossos porgramar em lua.
+
+* Condicionais {
+    - Assim como na maiorias das linguagens de programação,as estruturas condicionais em lua,são baseadas em resultados de operações booleanas,finalizando sempre com end.A linguagem considera false e nil como falsos,enquanto qualquer outro valor é considerado verdadeiro.As estruturas condicionais são sempre finalizadas com end 
+
+    Exemplo 1:
+        if 10 > 5 then
+            print(true)
+        end
+    Exemplo 2: 
+      if idade >= 18 then
+        print("Maior")
+      else
+        print("Menor")
+      end
+    Exemplo 3: 
+    if nota >= 9 then
+        print("Excelente")
+    elseif nota >= 7 then
+        print("Bom")
+    else
+        print("Regular")
+    end
+}
+
+* lanços {
+    1 - white: O while executar repetidamente um bloco de código,enquanto a condição especifica for verdadeira.Sendo ideal para o numero incerto de operações.Esse tipo de loop deve ser utilizado com cuidado,caso o contrario o loop pode acaba ficando em infinito. {
+        local contador = 1;
+
+        while contador <= 10 do
+            print('Contador: ' .. contador);
+            contador = contador + 1
+        end
+
+        - Esse loop pode ser utilizado com o break para evitar loop repetidos
+    }
+    2 - until .. repeat:Esse loop é semelhante ao while ou for,mas com uma diferença.O loop continuar até a expressão dentro dele se torna verdadeira,esse loop também vem com uma garantia em que será executado pelo menos uma vez: {
+        repeat 
+            contador = contador + 1
+            print('Contador: ' .. contador);
+        until contador >= 10
+
+        - Esse loop é comumente utilizado quando precisamos rodar o bloco de código pelo menos uma vez
+    }
+}

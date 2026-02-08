@@ -1,0 +1,21 @@
+- Lua é uma linguagem de programação poderosa,eficiente e leve,projetada para estender aplicações.Ela permite programação programação utilizado vários paradigmas: procedural,orientada a objetos,funcional e etc...
+
+- Lua surgiu no brasil,mas especificamente por uma equipe na PUC-Rio (Pontificia Universidade Católica do Rio de janeiro).
+
+- Lua tem uma otima reputação de leveza,velocidade e perfomace além de ser uma linguagem muito robusta.Isso acontece por que seu interpretador ocupa apenas 1.2m de tamanho no sistema.
+
+
+* Por que e para quem é Lua ? {
+
+    - Desenvolvedores de Jogos: Lua é amplamente utilizada na indústria de jogos como uma linguagem de script para desenvolvimento rápido de jogos e prototipagem. Sua sintaxe simples e poderosa, juntamente com sua capacidade de ser facilmente integrada a motores de jogos populares como Unity e Corona SDK, a tornam uma escolha popular para Game Developers.
+
+    - Programadores de Aplicações Embarcadas: Devido à sua leveza e eficiência, Lua é frequentemente utilizada em dispositivos embarcados e sistemas integrados. Ela permite o desenvolvimento de aplicações com baixo consumo de recursos, tornando-a uma escolha atraente para dispositivos IoT, sistemas de automação residencial, roteadores e muito mais.
+
+    - Scripting em Aplicações: Lua é frequentemente incorporada em outros softwares como uma linguagem de script. Ela é usada para criar scripts de automação, esticar a funcionalidade de apps e personalizar o comportamento de programas.
+
+    - Aprendizes e Entusiastas: Lua é uma ótima linguagem para iniciantes devido à sua sintaxe simples e conceitos de programação claros. Ela é frequentemente recomendada como uma linguagem de entrada para aqueles que desejam aprender programação pela primeira vez devido à sua facilidade de compreensão e implementação.
+
+    - Linguagem Brasileira: Lua é uma linguagem brasileira de programação projetada pelo Instituto Tecgraf da PUC-Rio em 1993!
+}
+
+Fonte: https://www.lua.org/portugues.html
