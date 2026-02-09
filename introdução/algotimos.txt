@@ -1,0 +1,107 @@
+Somar todos os valores de uma tabela
+
+Encontrar o maior e o menor número
+
+Contar quantas vezes um valor aparece
+
+Inverter uma tabela
+
+Remover valores duplicados
+
+Verificar se um número é par ou ímpar
+
+Calcular média de notas
+
+Gerar sequência de Fibonacci
+
+Verificar se um número é primo
+
+Contar vogais em uma string
+
+🟡 Intermediários (lógica + tabelas)
+
+Ordenar uma tabela sem usar table.sort
+
+Buscar um valor (busca linear)
+
+Busca binária (tabela ordenada)
+
+Contar palavras em um texto
+
+Converter string para tabela de caracteres
+
+Agrupar valores repetidos
+
+Merge de duas tabelas
+
+Remover elementos enquanto percorre
+
+Criar um contador de frequência
+
+Simular fila (queue) e pilha (stack)
+
+🔵 Algoritmos clássicos (bons pra entrevistas)
+
+Bubble Sort
+
+Selection Sort
+
+Insertion Sort
+
+Verificar palíndromo
+
+Anagrama
+
+Fatorial (recursivo e iterativo)
+
+Encontrar segundo maior número
+
+Rotacionar tabela
+
+Remover elemento específico
+
+Compactar valores consecutivos
+
+🟣 Um pouco mais avançado
+
+Tabela hash simples
+
+Caminhar tabela aninhada (recursão)
+
+Clonar tabela (deep copy)
+
+Flatten (achatar tabela)
+
+LRU cache (simples)
+
+Sistema de ranking
+
+Paginação de resultados
+
+Parser simples
+
+Simular máquina de estados
+
+Validador de expressão matemática simples
+
+🔥 Desafios práticos (bem legais)
+
+Sistema de inventário
+
+Sistema de cooldown
+
+Sistema de pontuação
+
+Agenda de tarefas
+
+Sistema de login (simulado)
+
+Sistema de eventos
+
+Chat simples
+
+Sistema de comandos
+
+Gerador de mapas
+
+Jogo da velha (tic-tac-toe)

@@ -1,0 +1,16 @@
+- Na linguagem de programação lua,temos uma única estrutura de dados em toda a linguagem,essa estrutura de dados é chamada de tabela (table).As tabelas são utilizadas para a crianção de arrays simples,objetos complexos e dicionarios.Com uma única estrutura podemos criar vários tipos.Com as tabelas podemos criar arrays indexados por numeros e strings,execto nil.Diferente de algumas estrutura especificas as tabelas não tem tamanho fixo e podem crescer de acordo com nossa necessidade.
+
+- As tabelas armazenam pares chave e valor,onde para ambos podemos adicionar qualquer tipo de dados,menos nil.Tudo em lua de arrays simples a objetos complexos funciona atráves de table.Quando os indices são numericos lua percebe aquela estrutura como um array e passa a otimiza-la como um array interno da propria linguagem
+
+* criando uma tabela simples {
+    - local langs = {"javascript","python","php","lua"} -- Esse tipo de tabela passa a ser visto como um array pela linguagem lua,isso por que seus indices são numeros consecutivos. {
+        - para acessamos dados do array langs utilizamos os indices 
+        print(langs[1])
+    }
+
+    - local user = {
+        name = "alvaro",
+        idade = 19
+    } -- Essa tabela é um objeto / dicionario 
+    
+}

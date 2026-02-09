@@ -1,6 +1,5 @@
 - Nesse arquivo iremos falar em detalhes sobre os operadores em lua 
 
-
 * Operadores Aritméticos (Matematicos): {
     +: Operador responsável por atribuir dois ou mais numeros 
     -: Operador responsável por subtrair dois ou mais numeros 
@@ -36,4 +35,8 @@
     * (<=): Verifica se é menor ou igual. Ex: 5 <= 5 (true).
     
     * (>=): Verifica se é maior ou igual. Ex: 10 >= 10 (true). 
+}
+
+# operador length (#): {
+    - para sabermos o comprimento de uma tabela em lua,utilizamos o operador #,mas lembrando que esse operador ignorar totalemente valores do tipo nil,pode ocasionar furos na tabela.
 }

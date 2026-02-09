@@ -42,4 +42,57 @@
 
         - Esse loop é comumente utilizado quando precisamos rodar o bloco de código pelo menos uma vez
     }
+    3 - for numerico: Em lua um for númerico é utilizado para interar em um numero especifico definidas vezes,executado o bloco de código.Esse for define uma váriavel (o contador) o valor de incremento (geralmente é inicializado como 1) e o valor que será a quantidade de vezes que o for irá percorre : {
+        - for i = 0,10 do 
+            print(i)
+        end
+
+        - for i = 1, 10, 2 do
+            print(i) -- Imprime 1, 3, 5, 7, 9
+        end
+
+        * com o for númerico podemos também percorre uma tabela inteira 
+
+        - for i = 0,#table do
+            print(table[i])
+        end
+    }
+    4 - for generico: Em lua também temos o for generico,ele é utilizado principalmente para percorre tabelas (Arrays/dicionarios),ele utiliza funções interadoras (pairs/ipairs).Esse tipo de for funciona até que o interador retorne nil,dando fim a sua execução: {
+
+
+        local frutas = {"maça","pera","goiaba"};
+
+        for char in ipairs(frutas) do 
+            print(char)
+        end
+
+        local user = {
+            name = "alvaro",
+            idade = 19
+        };
+
+        for key,value in pairs(user) do 
+            print(char)
+        end
+    }
+}
+
+- Explicando melhor sobre as funções interadoras ipairs / pairs {
+    1 - função pairs: {
+        - A função pairs é utilizada junto com tabelas chaves e valor (geralmente dicionarios).A função pairs é não segue uma ordenação especifica,diferente da sua função irma.
+        - A principal diferença entre pairs e ipairs é que a função pairs em comparação,acaba sendo mais generica.Mas como recomendado sua utilização deve ser para tabelas chave-valor.
+
+        local myDictionary = {
+            ["Blue Player"] = "Ana",
+            ["Gold Player"] = "Binh",
+            ["Red Player"] = "Cate",
+        }
+
+        for key, value in pairs(myDictionary) do
+            print(key .. " é " .. value)
+        end
+    }
+    2 - função ipairs: {
+        - Essa função interadora tem sua utilização um pouco mais especifica,diferente da função anterior,ela é utilizada para arrays ou tabelas com indices numericos.diferente da função anterior que não retorna uma ordem correta,essa função retorna os valores de forma ordenada 
+    }
 }
