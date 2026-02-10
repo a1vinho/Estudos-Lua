@@ -22,10 +22,51 @@
 
         print(nums)
     }
-    2 - table.remove(table<pos>): Para removemos um elemento especifico dentro de uma tabela,utilizamos a função table.remove: {
+    2 - table.remove(table,<pos>): Para removemos um elemento especifico dentro de uma tabela,utilizamos a função table.remove. o parametrô table é a tabela onde contém o elemento que desejamos remover,já o pos é a posição do elemento que desejamos remover dentro da tabela,caso não seja informado,a função irá remover o ultimo elemento: {
         local nums = {0,1,2,3};
+        table.remove(nums,2);
 
-
+        -- {0,2,3}
     }
-    // continua explicação
+    3 - table.move(origem, inicio, fim, destino, destino_inicio): Essa função é responsável por copia de maneira eficiente e perfomatica os elementos de uma tabela de origem para uma tabela de destino,ela também pode ser utilizada para copia elemento para a mesma tabela de origem. {
+        - Vamos destricha os parametros um por um 
+
+        1 - origem: A tabela de onde os valores serão copiados 
+        2 - inicio: Indice inicial de onde os valores irão começar a ser copiados.
+        3 - fim: Indice final até onde a copia será feita.
+        4 - destino: Tabela de destino onde os valores copiado serão armazenados.
+        5 - destino_inicio: Indice inicial da tabela de destino,onde os valores copiados começarão a ser inseridos. 
+
+
+        - exemplo: {
+            local origem = { 10, 20, 30, 40, 50 }
+            local destino = {}
+
+            table.move(origem, 1, 5, 1,destino);
+
+
+            for i,v in ipairs(destino) do
+                print(v)
+            end
+
+            * Nesse exemplo estamos copiados os valores das posições 1 e 5 para a tabela de destino 
+        }
+         - exemplo: {
+            local origem = { 10, 20, 30, 40, 50 }
+            local destino = {}
+
+            table.move(origem, 1, 5, 4);
+
+
+            for i,v in ipairs(origem) do
+                print(v)
+            end
+            * Nesse código estamos utilizando o table.move para sobreescreve elementos dentro da tabela de origem,podemos utilizar o table.move para sobreescreve elementos já existentes dentro da tabela
+         }
+    }
+    4 - table.pack(...): Essa função é responsável por criar uma nova tabela,baseado em uma lista de elementos dentro da mesma: {
+        local langs = {"javascript","php","python","csharp"};
+
+        local newTable = table.pack(langs);
+    }
 }
