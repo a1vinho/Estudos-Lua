@@ -12,5 +12,20 @@
         name = "alvaro",
         idade = 19
     } -- Essa tabela é um objeto / dicionario 
-    
+}
+
+* principais funções dentro de uma table {
+    1 - table.insert(table,<pos>,value): Essa função é utilizada para adicionar um novo elemento dentro de uma tabela,table é a tabela referenciada,<pos> é a posição do novo elemento,caso não informado o novo elemento irá para o fim da tabela e value é o elemento a ser adicionado dentro da tabela. {
+        local nums = {0,1,2,3};
+
+        table.insert(nums,4);
+
+        print(nums)
+    }
+    2 - table.remove(table<pos>): Para removemos um elemento especifico dentro de uma tabela,utilizamos a função table.remove: {
+        local nums = {0,1,2,3};
+
+
+    }
+    // continua explicação
 }
