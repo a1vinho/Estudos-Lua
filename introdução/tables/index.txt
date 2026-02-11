@@ -68,5 +68,10 @@
         local langs = {"javascript","php","python","csharp"};
 
         local newTable = table.pack(langs);
+
+        - Além do mais essa função guarda uma propriedade n,essa propriedade contém a quantidade de elementos dentro da nova tabela 
+
+        print(newTable.n)
+        - table.pack trabalha de maneira eficiente com valores nil em tabelas com valores consecutivos
     }
 }
