@@ -93,6 +93,12 @@
         end
     }
     2 - função ipairs: {
-        - Essa função interadora tem sua utilização um pouco mais especifica,diferente da função anterior,ela é utilizada para arrays ou tabelas com indices numericos.diferente da função anterior que não retorna uma ordem correta,essa função retorna os valores de forma ordenada 
+        - Essa função interadora tem sua utilização um pouco mais especifica,diferente da função anterior,ela é utilizada para arrays ou tabelas com indices numericos.diferente da função anterior que não retorna uma ordem correta,essa função retorna os valores de forma ordenada.
+
+        local langs = {'js',"py","cs","html"};
+
+        for index,value in ipairs(langs) do 
+            print(value)
+        end 
     }
 }

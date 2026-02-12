@@ -8,10 +8,21 @@
         print(langs[1])
     }
 
+    * interando sobre arrays consecutivos
+
+    for index,value in ipairs(langs) do 
+        print(value)
+    end; - utilizamos a função ipairs que é totalmente feita para arrays 
+
+    * interando sobre objetos ou dicionarios 
+
     - local user = {
         name = "alvaro",
         idade = 19
     } -- Essa tabela é um objeto / dicionario 
+    for (key,value in pairs(user)) do 
+        print(user[key])
+    end; - o pairs é uma função geralmente utilizada em objetos ou dicionarios,ela não garante ordem nos dados,diferente da função ipairs.Leia em detalhes o arquivo da pasta controle de fluxo
 }
 
 * principais funções dentro de uma table {
@@ -72,6 +83,51 @@
         - Além do mais essa função guarda uma propriedade n,essa propriedade contém a quantidade de elementos dentro da nova tabela 
 
         print(newTable.n)
-        - table.pack trabalha de maneira eficiente com valores nil em tabelas com valores consecutivos
+        - table.pack trabalha de maneira eficiente com valores nil em tabelas com valores consecutivos,essa função preserva os valores nil dentro da tabela,tornando a eficiente para trabalha com valores nulos,além do mais o table.pack preserva o tamanho real da tabela,pela propriedade n.
+        - o table.pack é principalmente utilizando quando não sabemos os dados que a lista poderá armazena,essa função previne comportamento inesperados.
+    }
+    5 - table.sort(table,[comp]): Essa função é utilizada para organiza uma tabela,por padrão essa função organiza uma tabela em ordem ascedente (crescente - numerica ou alfabetica).Podemos também alterar o comportamento padrão atráves do parametro comp,esse parametro é uma função onde podemos personaliza a ordenação: {
+
+        - Ordenação padrão
+
+        local frutas = {"banana", "laranja", "abacaxi"}
+        table.sort(frutas)
+        -- Resultado: {"abacaxi", "banana", "laranja"}
+        - a função table.sort so funciona em array com valores ou indices numericos consecutivos. 1,2,3,4.
+        - a função sort ela alterar a tabela original e não retorna uma nova.
+    }
+    6 - table.unpack(list,inicio,fim = #list): Essa função é responsável por desempacotar uma tabela,transformando-a em valores vareados que podem ser amarzenados em variaveis.Lembrando que essa função so funciona em tabelas com valores e indices consecutivos.Essa função pega os valores de uma tabela e os retorna como valores separados {
+        - Essa função é utilizada quando precisamos desestrutura um array consecutivo 
+        local nums = {1,2,3,4,5,6,50,200,100};
+        local max = math.max(table.unpack(nums)) // 100
+
+        * explicando cada argumento:
+        table: a tabela que você quer “desempacotar”.
+
+        i: índice inicial (opcional, padrão é 1).
+
+        j: índice final (opcional, padrão é #table, ou seja, o tamanho da tabela).
+
+        - em resumo essa função é o oposto da função table.pack que pega os valores separados e armazena em uma tabela.
+
+        local t = {10, 20, 30, 40, 50}
+
+        print(table.unpack(t, 2, 4))  -- pega do índice 2 ao 4
+    }
+    7 - table.concat(list,sep,inicio,fim):Essa função é responsável por junta uma tabela passada como argumento utilizando um seperador especifico.Em outras palavras, essa função junta uma tabela em uma única string,utilizando um separador especifico.Lembrando mais uma vez que essa função funciona apenas em tabelas com valores ou indices consecutivos {
+        local nums = {1,2,3,4,5}
+        print(table.concat(nums)) 12345
+
+        - Essa função transforma toda a tabela em uma única string.
+
+        local text = {"Lua","é","legal"};
+        print(table.concat(text,'-> ')) Lua->é->legal
+
+        * podemos também utiliza os intervalos 
+
+        local letras = {'a','b','c','d','e'};
+        print(table.concat(letras,':',3,5)) // c:d:e
     }
 }
+
+* Se você chegou até aqui significa que você está muito focado nos estudos em lua.Parabens
