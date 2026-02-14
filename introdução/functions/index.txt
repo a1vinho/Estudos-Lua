@@ -1,0 +1,95 @@
+- Na linguagem de programação lua,assim como grande parte das outras linguagem,temos as funções.Funções são blocos de códigos reutilizaveis definidas com a palavra chave function,em lua as funções são tratadas como "valores de primeira classe",isso signfica que as funções podem ser passadas como variaveis,retornadas por outras funções,passadas como argumento e até armazenadas em estruturas de dados.
+
+- Em lua as funções começa com a palavra chave function e são encerradas com o end {
+    function consoleLog(text) 
+        print(text);
+    end
+
+    consoleLog('olá')
+}
+* Funções com parametros {
+    - Assim como grande parte da programção,em lua temos o poder de adicionar parametros dentro das funções.Os parametros seria os argumentos passados dentro dos parenteses de uma função.
+
+    function soma(a,b) {
+        local soma = a + b;
+        return soma;
+    };
+
+    print(soma(2,5));
+}
+* Funções com multiplos retornos {
+    - Na linguagem lua podemos retorna vários valores de maneira direta ao mesmo tempo 
+
+    function divide(dividendo, divisor)
+        local quociente = math.floor(dividendo / divisor)
+        local resto = dividendo % divisor
+        return quociente, resto
+    end
+
+    local quociente, resto = divide(10, 3)
+    print("Quociente: " .. quociente .. " Resto: " .. resto)
+}
+
+* Funções variadicas (Varargs) {
+    - Esses tipos de funções aceitam varios argumentos ao mesmo tempo,utilizamos o operador (...) dentro dos parenteses da função 
+
+    function dobro(...) 
+        local args = {...};
+
+        for index,value in ipairs(args) do
+            print(value * 2)
+        end
+    end
+}
+
+* Funções anonimas {
+    - Funções anonimas são funções que não tem um nome de chamada,ela geralmente são passadas dentro de variaveis ou como argumento para outras funções.
+
+    local soma = function(a,b) 
+        return a + b;
+    end;
+
+    function teste(callback) {
+        return callback();
+    }
+    teste(function() {
+        console.log('teste');
+    });
+}
+* Funções dentro de tabelas {
+    - Podemos adicionar funções dentro de tabelas,tornando a programação em lua muito flexivel e extensa 
+
+    local teste = {
+        name = function() {
+            return "alvaro"
+        }
+    }
+}
+
+* Escopos de variaveis {
+    - As variaveis definidas com a palavra chave local dentro das funções,são restritas e só podem ser acessadas dentro do bloco que foram definidas.
+
+    - As variaveis locais são mais recomendadas do que as variaveis globais,isso por que as variaveis definidas com a palavra chave locals são mais rapidas e tem o intuito de manter o código mais limpo e eficiente.
+
+    - As variaveis local são reservadas diretamente pelos registradores da linguagem,isso a torna muito mais rapidas.
+
+    * Caracteristicas do escopo local {
+        1 - Visibilidade: As variaveis definidas com o local,são limitadas ao bloco em que foram criada (if,for,function).
+        2 - Tempo de vida (time life): Assim que o bloco de código termina de ser executado as váriaveis dentro do bloco são automaticamente destruidas (garbage collector)
+        3 - Perfomance: As váriaveis definidas com o local são armazenadas mais rapidas na memoria.
+        4 - Padrão: Na linguagem lua é altamente recomendado utilizamos o local para a crianção de váriaveis,isso por que ela mantém nosso código limpo,organizando e com uma maior perfomance
+    }
+
+    local x = 10
+
+
+    - Escopo global é quando definimos uma váriavel sem o uso do local,quando isso acontence,essa variavel passa a ser acessada por qualquer parte do nosso código,independente de onde foi criada.
+    - As variaveis globais são armazenadas em uma tabela especial chamada _G
+
+    _G["x"] = 10
+    print(_G);
+
+    - O uso das váriaveis globais deve ser em caso muito especifico.
+
+
+}
