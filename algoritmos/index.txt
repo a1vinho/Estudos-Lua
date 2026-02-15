@@ -1,0 +1,10 @@
+- Antes de darmos inicio ao nossos estudos na programação algoritma precisamos entender o que é um algoritmo e como ele funciona.Em resumo um algoritmo,é um conjunto de instruções finita que resolver algum problema ou tarefa especifica.Um algoritmo nada mais é do que uma "receita" que diz como fazer determinada tarefa.A maioria dos algoritmo recebe dados de entradas (input) e transforma em resultados de saida (output).
+
+- Na internet, algoritmos são usados para organizar e processar grandes volumes de dados, decidindo que informações são mais relevantes para os usuários com base em seus comportamentos, preferências e interações anteriores.
+
+
+- No mundo da tecnologia atual,temos uma vasta gama de algoritmo cada um para cada caso ou tarefa especifica.
+
+- Os algoritmos ajuda a pensamos com logica,dividido o problema em partes menores,tornando não só nosso código mas também nossa logica mais aprimorada.
+
+fonte: https://querobolsa.com.br/revista/o-que-e-algoritmo-na-internet

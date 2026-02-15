@@ -1,0 +1,53 @@
+- O selection sort é um algoritmo de ordenação muito simples e um dos primeiros a serem aprendidos.Ele organiza uma lista encontrando o menor elemento e o movendo para a sua posição correta,trocando o menor valor com o da posição atual.Esse algoritmo é ideal para lista e arrays pequenos,sua complexidade é de tamanho O(n)2.
+
+* Como funciona o selectionSort {
+    - Esse algoritmo funciona seperador o array em duas partes principais (ordenada -> inicialmente vazia,não ordenada -> inicialmente todo o array)
+    - O algoritmo pega o primeiro elemento da parte não ordenada e o compara com o elemento da parte ordenada atual,verificando se o elemento da parte não ordenada é maior que o valor da parte ordenada,movendo o elemento para o final da lista ordenada.
+
+
+    --------- demonstrando em detalhes ---------
+    [8,6,2,4,9,7,1,10];
+
+    - Nesse algoritmo o primeiro passo é recuperar o menor elemento da lista embaralhada (1).
+    - Depois de encontramos o menor valor da lista,o movemos para a primeira posição;
+
+        [1,6,2,4,9,7,8,10];
+    - O valor 1 oito esta ordenando mais toda a lista está embaralhada,agora so precisamos repetir o mesmo processo em toda a lista.Agora só devemos seguir a mesma logica,recuperamos o menor valor (menos o já ordenado) e o comparamos com os valores seguintes.
+
+        [1,2,6,4,9,7,8,10];
+
+        [1,2,4,6,9,7,8,10];
+
+        [1,2,4,6,7,9,8,10];
+
+        [1,2,4,6,7,8,9,10];
+
+        - Lista ordenada toltamente
+    - O algoritmo de selação (selectionSort) é um otimo algoritmo para aprendizado e iniciantes em ordenação,mas quando se trata de eficiencia e ordenação em comparação com outros algoritmos,ele fica para trás.Além do mais sua complexidade é a mesma para os 3 cenarios possiveis (pior - medio - melhor -> O(n)2),isso o torna ineficiente para grandes volumes de dados.
+
+    ----- Exemplo em código em lua ------
+
+    local nums = {100,25,6,0};
+
+    local selectionSort = function()
+        for i = 1,#nums do
+            local min = i;
+
+            for j = i + 1,#nums do
+                if (nums[j] < nums[min]) then
+                    min = j;
+                end         
+            end
+            local temp = nums[min];
+            nums[min] = nums[i];
+            nums[i] = temp
+        end
+        return nums;
+    end
+
+    local teste = selectionSort()
+
+    for _,value in ipairs(teste) do
+        print(value)
+    end
+}

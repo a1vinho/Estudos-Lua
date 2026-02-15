@@ -90,6 +90,6 @@
     print(_G);
 
     - O uso das váriaveis globais deve ser em caso muito especifico.
-
+    - Em comparação com váriaveis locais,as globais são menos perfomaticas 
 
 }

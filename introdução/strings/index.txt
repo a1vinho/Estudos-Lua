@@ -1,0 +1,31 @@
+- Como sabemos,na programação as strings são os principais tipos primitivos da grande maiorias se não de todas as linguagens de programação.Em lua uma string é uma sequencia de caracteres formando por um par de aspas simples ou duplas,ou concheltes para multiplas linhas ([[]]).
+
+- Gerenciamento automático de memória e possuem manipulação eficiente para grandes textos. As aspas duplas e simples funcionam de forma idêntica para delimitar o texto. 
+
+*** Trabalhando com strings *** {
+    - Concatenação: {
+        - Em lua para juntamos duas ou mais strings utilizamos o operador (..) em seguinda da string que desejamos junta.
+    }
+    - Caracteres de escapes: {
+        - Em lua podemos utilizar varios caracteres de escapes,esses escapes segue o estilo da linguagem C.
+
+        - Os caracteres de escapes são sequências especiais usadas dentro de strings para representar: {
+            Caracteres invisíveis
+
+            Quebra de linha
+
+            Tabulação
+
+            Aspas dentro da própria string
+
+            Caracteres especiais pelo código numérico
+        }
+
+        \n: Quebra de linha 
+
+        \\\: Uso de aspas simples dentro da string ("olá,\"tudo bem\" ") e também aspas duplas
+        \\t: Esse caractere organiza as informações dentro da string,podendo torna-la mais legivel. ("nome: \tlua" -> nome: lua) 
+        - Para mais informações sobre os caracteres de escape,leia: https://www-codecademy-com.translate.goog/resources/docs/lua/strings?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc&_x_tr_hist=true
+    }
+    // continua explicação amanhã
+}

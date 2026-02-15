@@ -130,4 +130,6 @@
     }
 }
 
+- Lembrando que tabelas também pode ser arquivos ou modulos.Internamente as tabelas são diferentes ou seja hibridas.
+ 
 * Se você chegou até aqui significa que você está muito focado nos estudos em lua.Parabens

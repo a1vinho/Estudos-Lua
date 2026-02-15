@@ -18,4 +18,18 @@
     - Linguagem Brasileira: Lua é uma linguagem brasileira de programação projetada pelo Instituto Tecgraf da PUC-Rio em 1993!
 }
 
+- Como lua funciona internamente ? {
+    - Lua utiliza o formato bytecode para a execução do código,bytecode é um tipo de código intermediario,esse tipo de código é projetado para portabilidade ,sendo executado por uma maquina virtual e não diretamente pelo processador.
+    - Lua utiliza um interpretador a base de registradores,seu código é executado pela sua maquina virtual (Lua VM) ou seja o computador não executar o codigo fonte diretamente.
+    - A VM lua é altamente portatil entre os sistema operacionais,isso a torna uma otima escolha quando se trata de portabilidade.
+    - Podemos conectar a linguagem lua com softwares e sistema feito em linguagens C utilizando a api C
+
+    - Lua utiliza um garbage collector altamente eficiente,onde não precisamos liberar memoria manualmente,a linguagem já faz isso por nós.
+
+    * Um dos princiapis segredos por trás do poder da linguagem lua está totalmente na sua maquina virtual,com a vm lua podemos embutir scripts dentro de softwares e jogos,roda comandos dentro de engines e etc...Além do mais temos o luaJIT que torna a execução do código lua ainda mais rapido com tecnicas como JIT.
+
+    --------- É o design minimalista + VM simples + tabelas poderosas + integração com C. ----------
+    * Todo os códigos escritos em lua são transformados primeiros em bytecodes e depois executado pela vm 
+}
+
 Fonte: https://www.lua.org/portugues.html

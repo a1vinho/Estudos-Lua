@@ -1,1 +1,5 @@
--- continua os estudos amanhã
+local text = "olá \"teste\" ";
+
+local teste = "nome: \talvaro"
+
+print(teste)
