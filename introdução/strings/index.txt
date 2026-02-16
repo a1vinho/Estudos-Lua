@@ -1,10 +1,14 @@
 - Como sabemos,na programação as strings são os principais tipos primitivos da grande maiorias se não de todas as linguagens de programação.Em lua uma string é uma sequencia de caracteres formando por um par de aspas simples ou duplas,ou concheltes para multiplas linhas ([[]]).
 
-- Gerenciamento automático de memória e possuem manipulação eficiente para grandes textos. As aspas duplas e simples funcionam de forma idêntica para delimitar o texto. 
+- Lua possui um gerenciamento automático de memória e possui manipulação eficiente para grandes textos. As aspas duplas e simples funcionam de forma idêntica para delimitar o texto.Aleḿ do mais as strings em lua são imutaveis e não podem ser alteradas diretamente,quando queremos alterar algum valor dentro da string,uma nova string será criada,a anterior será imutavel. Numeros engativos podem ser usado para contar até o final ou inverte a ordem das funções.
+
+- A função # ou string.len(str) retorna o tamanho de uma string,o index -1 retorna o ultimo elemento da string.
 
 *** Trabalhando com strings *** {
     - Concatenação: {
-        - Em lua para juntamos duas ou mais strings utilizamos o operador (..) em seguinda da string que desejamos junta.
+        - Em lua para juntamos duas ou mais strings utilizamos o operador (..) em seguinda da string que desejamos junta.Assim como nos arrays,os indices das strings começa em 1 e não em 0.
+
+        local name = "Lua" .. "programação"
     }
     - Caracteres de escapes: {
         - Em lua podemos utilizar varios caracteres de escapes,esses escapes segue o estilo da linguagem C.
@@ -27,5 +31,36 @@
         \\t: Esse caractere organiza as informações dentro da string,podendo torna-la mais legivel. ("nome: \tlua" -> nome: lua) 
         - Para mais informações sobre os caracteres de escape,leia: https://www-codecademy-com.translate.goog/resources/docs/lua/strings?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc&_x_tr_hist=true
     }
-    // continua explicação amanhã
+
+    - Principais funções strings em lua {
+        - Em lua temos a biblioteca string,essa biblioteca nós fornece várias funções para manipulação de strings e crianção de novas strings.
+
+        1 - string.len(str): {
+            - Essa função retorna o tamanho de uma string.
+            local str = "lua";
+            print(string.len(str)) // 3 
+        }
+        2 - string.lower(str) {
+            - Essa função retorna uma nova string,transformando todos os caracteres anterior em minusculas
+
+            local str = "LUA";
+            print(string.lower(str)) // lua
+        }
+        3 - string.upper(str) {
+            - Essa função retorna uma nova string,transformando todos os caracteres em maiusculas.
+
+            local str = "lua";
+            print(string.upper(str));
+        }
+        4 - string.sub(str,start,end) {
+            - Essa função é usada para pega uma substring (parte de uma string),ela começa no indice start e vai até end,caso end não seja informado a função percorre toda a string.
+
+            local text = "Lua é uma linguagem de programação";
+
+            print(string.sub(text,1,4)) // Lua 
+            - Podemos utilizar uma outra sintaxe,chamada sintaxe de objeto
+
+            print(text:sub(1,4)) // Lua
+        }
+    }
 }
