@@ -1,0 +1,29 @@
+- Na linguagem lua temos uma maneira poderosa de trabalhamos com leitura e escrita de arquivos,utilizamos a biblioteca padrão IO,essa biblioteca é um modulo padrão para entrada e saidas de dados dentro da linguagem,permitindo ler,escrever e manipular arquivos,além de poder interagir com entradas e saidas de dados no terminal.Essa biblioteca oferece uma sintaxe simples e de facil utilização.
+
+* Operação simples de manipulação de arquivos em lua {
+    - Uma operação simples em manipulação de arquivos em lua,utiliza a seguinte sintaxe.
+
+    local file = io.open(file,modos);
+
+    - Atráves do io temos vários métodos e modos de manipulação de arquivos.
+}
+* A biblioteca io tem dois tipos de manipulação de arquivos,implicito ou modelo simples e o modelo explicito {
+    - Antes de entendermos mais sobre a biblioteca io,vamos primeiro fazer uma breve explicação sobre os dois tipos de manipulação.: {
+        1 - Modelo implicito: Esse tipo de modelo é o modelo manual,onde deixamos tudo por debaixo dos panos,fazendo apenas o necessario.Esse tipo de modelo já vem com as regras e parametros pre-definidos,esperando apenas sua utilização.Em lua esse tipo de modelo é otimo quando queremos fazer uma operação mais simples e rapida,tendo a produtivade aumentada. {
+            - A linguagen tem 3 tipos de modelos padrão que a propria linguagem utiliza para a manipulação de entra e saida.
+
+            io.stdin: entrada de dados
+            io.stdout: saida dos dados
+            io.stderr: mesagens de erros,separadas das mensagens normais (stdout)
+            - exemplo simples de implicito: print('Olá') -> io.stdout
+
+            io.output('index.txt') -> io.stdout
+        }
+
+        2 - Modelo explicito: Esse tipo de modelo já é mais manual,onde grande parte do funcionamento fica por nossa parte.É onde dizemos para a linguagem como tudo deve acontencer,onde grande parte fica por nossa parte. {
+            - Esse modelo é quando deixamos claro o comportamento do nosso código.
+
+            // termina explicação amanhã
+        }
+    }
+}

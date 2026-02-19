@@ -1,6 +1,3 @@
--- Lendo a saida de um arquivo e escrevendo no mesmo.
-io.output('./teste.js');
-io.write([[
 const os = require('os');
 const fs = require('fs');
 
@@ -11,6 +8,6 @@ async function getCpus() {
         return cpus;
     };
     return cpus
-}
+};
+
 console.log(getCpus());
-]])
