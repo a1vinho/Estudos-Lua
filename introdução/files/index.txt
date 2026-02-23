@@ -7,23 +7,148 @@
 
     - Atráves do io temos vários métodos e modos de manipulação de arquivos.
 }
-* A biblioteca io tem dois tipos de manipulação de arquivos,implicito ou modelo simples e o modelo explicito {
+* A biblioteca io tem dois tipos de manipulação de arquivos,modelo simples e o modelo completo {
     - Antes de entendermos mais sobre a biblioteca io,vamos primeiro fazer uma breve explicação sobre os dois tipos de manipulação.: {
-        1 - Modelo implicito: Esse tipo de modelo é o modelo manual,onde deixamos tudo por debaixo dos panos,fazendo apenas o necessario.Esse tipo de modelo já vem com as regras e parametros pre-definidos,esperando apenas sua utilização.Em lua esse tipo de modelo é otimo quando queremos fazer uma operação mais simples e rapida,tendo a produtivade aumentada. {
-            - A linguagen tem 3 tipos de modelos padrão que a propria linguagem utiliza para a manipulação de entra e saida.
+        1 - Modelo simples: Esse tipo de modelo é o modelo manual,onde deixamos tudo por debaixo dos panos,fazendo apenas o necessario.Esse tipo de modelo já vem com as regras e parametros pre-definidos,esperando apenas sua utilização.Em lua esse tipo de modelo é otimo quando queremos fazer uma operação mais simples e rapida,tendo a produtivade aumentada. {
+            - A linguagen tem 3 tipos de modelos padrão que a propria linguagem utiliza para a manipulação de entrada e saida.
+            - Nesse modelo,a linguagem utiliza arquivos e padrões já definidos
 
-            io.stdin: entrada de dados
-            io.stdout: saida dos dados
+            io.stdin: entrada de dados (padrão -> teclado)
+            io.stdout: saida dos dados (padrão -> console)
             io.stderr: mesagens de erros,separadas das mensagens normais (stdout)
             - exemplo simples de implicito: print('Olá') -> io.stdout
 
-            io.output('index.txt') -> io.stdout
+            principais funções do modelo simples : {
+                1 - io.read(mode): {
+                    - Essa função é utilizada para interatividade no terminal (stdin -> padrão),quando desejamos capturar entrada de dados enviadas pelo usuário pelo terminal ou console.Além disso essa função é utilizada para ler dados externos,vindo fora do nosso programa.O poder dessa função aumenta ainda mais,quando vemos que ela receber parametros.
+
+                    local nome = io.read();
+
+                    - A utilização dessa função é sempre recomendado utilizamos uma váriavel para seu armazenamento.
+
+                    - Principais modos dessa função: {
+                        *l: Esse modo é o padrão,ele ler apenas a primeira linha,ignorando os caracteres de nova linha (\n);
+                        *a: Com esse modo podemos ler todo o conteúdo de entrada.
+                        *n: Com esse modo podemos ler numeros inteiros ou de ponto flutuante.
+                        io.read(numero): Nesse modo a função irá ler um número especifico de caracteres. 
+                    }
+                };
+                2 - io.write(msg): {
+                    - Essa função é utilizada para escritar de dados,por padrão no terminal (stdout -> padrão),com ela podemos escrever mensagens personalizadas.Digamos que queremos que o arquivo de saida passe a ser code.js.
+
+                    io.output('./code.js') -> arquivo de saída,não é mais o stdout.
+                    local code = io.read();
+
+                    io.write(code);
+
+                    - Agora estamos escrevendo o que vem do terminal no arquivo code.js.
+                }
+                3 - io.output(output): {
+                    - Essa função definir saída dos dados recebidos (output),o padrão de saida é via console (stdout),com essa função podemos definir o padrão de saida que iremos receber do input (stdin).
+
+                    io.output('./index.js');
+
+                    local text = io.read();
+
+                    io.write(text);
+
+                    - Nesse exemplo estamos definindo o padrão de saida para index.js,os dados ainda continua sendo recebindo de maneira padrão (via console -> stdin.);
+                }
+                4 - io.input(input): {
+                    - Essa função é utilizada para alterar os dados de entrada padrão (stdin) para algum arquivo especifico.Ou seja,mudamos os dados vindo do console,para algum arquivo especifico.
+
+                    io.input('code.js');
+
+                    local content = io.read('a') -- estamos lendo todo o contéudo do arquivo.
+
+                    print(content)
+
+                    -- Se quisermos ainda mais poder
+
+                    io.output('copy-code.js');
+                    io.write(content)
+                }
+            }
+            - Essas são as funções principais do modelo simples da biblioteca io,apesar de simples,seus métodos e funções são altamentes poderosos.Lembrando que ao utilizamos uma operação de manipulação de arquivos,devemos sempre fecha o arquivo logo após
         }
 
-        2 - Modelo explicito: Esse tipo de modelo já é mais manual,onde grande parte do funcionamento fica por nossa parte.É onde dizemos para a linguagem como tudo deve acontencer,onde grande parte fica por nossa parte. {
-            - Esse modelo é quando deixamos claro o comportamento do nosso código.
+        2 - Modelo completo: Esse tipo de modelo,é quando utilizamos e começamos a trabalhar com objetos de arquivos,diferente do modelo simples,ele é mais poderoso e flexivel. {
+            - Ele utiliza uma função principal chamada io.open(file,mode),essa função retorna um objeto,contendo alguns métodos.
 
-            // termina explicação amanhã
+            local file = io.open('file.text','r') -- Aqui estamos abrindo o arquivo somente em modo leitura.
+            - A função open vem com vários modos,que permite maior flexibilidade e manipulação dos arquivos.
+
+            * Principais modos {
+                - r (leitura / read): Esse modo é utilizado para somente leitura,ou seja o arquivo não pode ser escrito ou sobreescrito: {
+                    local file = io.open('file.txt','r');
+                    for row in file:lines('a') do 
+                        print(row)
+
+                        file:close();
+                    end 
+                }
+                - w (escrita / write): Esse modo criar um novo arquivo ou sobreescreve algum existente: {
+                    local file = io.open('file.js','w');
+                    file:write('Olá,Javascript eu sou o lua');
+                    file:close();
+                }
+                - a (adição / append): Esse modo permite abrir ou criar um arquivo e adicionar dados ao final. {
+                    local file = io.open('file.js','w');
+                    file:write('Olá,Javascript eu sou o lua');
+                    file:close();
+                    - Os dados do método write,será adicionando no final do arquivo,sem sobreescrita.
+                }
+                - r+ (leitura/escrita): Esse modo permite ler e escrever em um arquivo,preservando seu conteúdo existente.
+                - b (binary/binário): Esse modo é utilizando para ler arquivos binários,ele pode ser usando com outra flags,por exemplo (rb),estamos dizendo que queremos ler o arquivo e que esse arquivo é binário.
+
+                - A vários outros modos dentro da função,mas esses 5 são os principais modos e os mais utilizados.
+            }
+        }
+        * Principais métodos da função open {
+            local file = io.open('file.txt','r+');
+
+            1 - file:lines(): Esse método é responsável por retorna um interador,onde podemos utiliza loops sobre as linhas de um arquivo: {
+                for row in file:lines() do 
+                    print(row)
+                end
+            }
+            2 - file:write(text): Esse método é utilizando para escrever em um arquivo ou sobreescrever algum existente.
+            3 - file:close(): Fecha o arquivo
+            4 - file:flush(): {
+                - Esse método é utilizado para gravação imedianta dos arquivos.
+                - Quando utilizamos file:write('Ola') essa gravação não é salva imediantamente no computador,ao invés disso a gravação vai para uma área da memória chamada buffer,quando utilizamos o flush,os daddos do buffer vai direto para o arquivo.
+
+                file:write('text');
+                file:flush(); -- força gravação imedianta
+                file:close();
+
+                - Esse método é útil quando queremos minimizar o minimo possivel de perca dos dados ou para quando o programa feche de maneira imprevisivel.
+
+                - close() já faz um flush() automaticamente.
+                - flush() só faz sentido para arquivos abertos para escrita.Além do mais o flush retorna true em caso de sucesso e uma mensagem de erro caso falhe: {
+                    local ok, erro = arquivo:flush()
+                    if not ok then
+                        print("Erro ao gravar:", erro)
+                    end
+                }
+            }
+            5 - file:seek(ponto_referencia,bytes) {
+                - Esse talvez seja o método mais poderoso da manipulação de arquivos dentro da linguagem lua.Ele é responsável por mover o cursor dentro do arquivo,ou seja,com esse métodos podemos dizer onde a proxima leitura irá ocorre e onde a proxima escrita será feita.
+
+                - Vamos começa explicando sobre os parametros {
+                    ponto_referencia: Esse parametro indica onde vamos começa a nossa manipulação,ele vem com 3 parametros principais. {
+                        1 - set: Inicio do arquivo,o unico parametro que não pode ser negativo
+                        2 - cur: Indicar a posição atual que estamos
+                        3 - end: Final do arquivo
+                    }
+                    bytes: Essa é a quantidade de bytes que iremos mover o curso 
+
+                    local bytes = file:seek('cur',10)
+                    file:write('text') -- Essa frase será escrita 10 bytes a frente.
+
+                    // Termina explicação amanha
+                }
+            }
         }
     }
 }

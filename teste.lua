@@ -1,16 +1,23 @@
--- Lendo a saida de um arquivo e escrevendo no mesmo.
-io.output('./teste.js');
-io.write([[
-const os = require('os');
-const fs = require('fs');
+-- Modelo simples de escrita e leitura de arquivos (LIB: IO)
 
-async function getCpus() {
-    const cpus = os.cpus();
-    if (cpus.length > 10) {
-        console.log('Otima maquina!!');
-        return cpus;
-    };
-    return cpus
-}
-console.log(getCpus());
-]])
+io.input('teste.js');
+
+local content = io.read('a') -- estamos lendo todo o contéudo do arquivo.
+
+print(content)
+
+-- Se quisermos ainda mais poder
+
+io.output('copy-code.js');
+io.write(content)
+
+-- Modelo completo 
+
+local file = io.open('teste.js','r+');
+
+local bytes = file:seek("end",100)
+
+file:write('teste')
+file:close();
+
+print(bytes)
